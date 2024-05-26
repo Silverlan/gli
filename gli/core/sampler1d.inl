@@ -1,5 +1,6 @@
 #include "clear.hpp"
-#include <glm/vector_relational.hpp>
+
+import glm;
 
 namespace gli
 {

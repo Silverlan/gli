@@ -59,7 +59,7 @@ namespace detail
 
 		glm::u32vec2 const Input(TexelCoord);
 
-		return static_cast<size_t>(glm::bitfieldInterleave(Input.x, Input.y));
+		return static_cast<size_t>(glm::gtc::bitfieldInterleave(Input.x, Input.y));
 	}
 
 	inline size_t texel_morton_addressing

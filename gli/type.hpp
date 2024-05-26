@@ -7,10 +7,7 @@
 #include <cstddef>
 
 // GLM
-#define GLM_FORCE_EXPLICIT_CTOR
-#include <glm/glm.hpp>
-#include <glm/ext/vector_int1.hpp>
-#include <glm/ext/scalar_uint_sized.hpp>
+import glm;
 
 #if GLM_COMPILER & GLM_COMPILER_VC
 #	define GLI_FORCE_INLINE __forceinline

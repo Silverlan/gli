@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include <glm/ext/scalar_uint_sized.hpp>
+import glm;
 
 namespace gli
 {

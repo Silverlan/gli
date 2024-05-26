@@ -13,11 +13,9 @@
 #include "../format.hpp"
 
 // GLM
-#include <glm/gtc/round.hpp>
-#include <glm/gtc/bitfield.hpp>
-#include <glm/gtx/component_wise.hpp>
+import glm;
 
-static_assert(GLM_VERSION >= 99, "GLI requires at least GLM 0.9.9");
+// static_assert(GLM_VERSION >= 99, "GLI requires at least GLM 0.9.9");
 
 namespace gli
 {

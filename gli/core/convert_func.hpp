@@ -10,9 +10,9 @@
 #include "../texture_cube_array.hpp"
 #include "./s3tc.hpp"
 #include "./bc.hpp"
-#include <glm/gtc/packing.hpp>
-#include <glm/gtc/color_space.hpp>
 #include <limits>
+
+import glm;
 
 namespace gli{
 namespace detail
@@ -229,7 +229,7 @@ namespace detail
 		static void write(textureType & Texture, typename textureType::extent_type const & TexelCoord, typename textureType::size_type Layer, typename textureType::size_type Face, typename textureType::size_type Level, vec<4, retType, P> const & Texel)
 		{
 			static_assert(std::numeric_limits<retType>::is_iec559, "CONVERT_MODE_SRGB requires a float sampler");
-			access::store(Texture, TexelCoord, Layer, Face, Level, gli::compScale<T>(convertLinearToSRGB(vec<L, retType, P>(Texel))));
+			access::store(Texture, TexelCoord, Layer, Face, Level, glm::gtx::compScale<T>(convertLinearToSRGB(vec<L, retType, P>(Texel))));
 		}
 	};
 
@@ -421,7 +421,7 @@ namespace detail
 		static vec<4, retType, P> fetch(textureType const & Texture, typename textureType::extent_type const & TexelCoord, typename textureType::size_type Layer, typename textureType::size_type Face, typename textureType::size_type Level)
 		{
 			static_assert(std::numeric_limits<retType>::is_iec559, "CONVERT_MODE_RGB10A2USCALE requires a float sampler");
-			glm::detail::u10u10u10u2 Unpack;
+			glm::u10u10u10u2 Unpack;
 			Unpack.pack = access::load(Texture, TexelCoord, Layer, Face, Level);
 			return vec<4, retType, P>(Unpack.data.x, Unpack.data.y, Unpack.data.z, Unpack.data.w);
 		}
@@ -429,7 +429,7 @@ namespace detail
 		static void write(textureType & Texture, typename textureType::extent_type const & TexelCoord, typename textureType::size_type Layer, typename textureType::size_type Face, typename textureType::size_type Level, vec<4, retType, P> const & Texel)
 		{
 			static_assert(std::numeric_limits<retType>::is_iec559, "CONVERT_MODE_RGB10A2USCALE requires a float sampler");
-			glm::detail::u10u10u10u2 Unpack;
+			glm::u10u10u10u2 Unpack;
 			Unpack.data.x = static_cast<uint>(Texel.x);
 			Unpack.data.y = static_cast<uint>(Texel.y);
 			Unpack.data.z = static_cast<uint>(Texel.z);
@@ -446,7 +446,7 @@ namespace detail
 		static vec<4, retType, P> fetch(textureType const & Texture, typename textureType::extent_type const & TexelCoord, typename textureType::size_type Layer, typename textureType::size_type Face, typename textureType::size_type Level)
 		{
 			static_assert(std::numeric_limits<retType>::is_iec559, "CONVERT_MODE_RGB10A2SSCALE requires a float sampler");
-			glm::detail::i10i10i10i2 Unpack;
+			glm::i10i10i10i2 Unpack;
 			Unpack.pack = access::load(Texture, TexelCoord, Layer, Face, Level);
 			return vec<4, retType, P>(Unpack.data.x, Unpack.data.y, Unpack.data.z, Unpack.data.w);
 		}
@@ -454,7 +454,7 @@ namespace detail
 		static void write(textureType & Texture, typename textureType::extent_type const & TexelCoord, typename textureType::size_type Layer, typename textureType::size_type Face, typename textureType::size_type Level, vec<4, retType, P> const & Texel)
 		{
 			static_assert(std::numeric_limits<retType>::is_iec559, "CONVERT_MODE_RGB10A2SSCALE requires a float sampler");
-			glm::detail::i10i10i10i2 Unpack;
+			glm::i10i10i10i2 Unpack;
 			Unpack.data.x = static_cast<int>(Texel.x);
 			Unpack.data.y = static_cast<int>(Texel.y);
 			Unpack.data.z = static_cast<int>(Texel.z);

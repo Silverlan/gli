@@ -1,5 +1,4 @@
-#define GLM_ENABLE_EXPERIMENTAL
-#include <glm/gtx/wrap.hpp>
+import glm;
 
 namespace gli{
 namespace detail
@@ -23,10 +22,10 @@ namespace detail
 		{
 			glm::clamp,
 			detail::passThrought,
-			glm::repeat,
-			glm::mirrorRepeat,
-			glm::mirrorClamp,
-			glm::mirrorClamp
+			glm::gtc::repeat,
+			glm::gtc::mirrorRepeat,
+			glm::gtc::mirrorClamp,
+			glm::gtc::mirrorClamp
 		};
 		static_assert(sizeof(Table) / sizeof(Table[0]) == WRAP_COUNT, "Table needs to be updated");
 

@@ -15,7 +15,7 @@ namespace gli
 		, Faces(Faces)
 		, Levels(Levels)
 		, BlockSize(gli::block_size(Format))
-		, BlockCount(glm::ceilMultiple(Extent, gli::block_extent(Format)) / gli::block_extent(Format))
+		, BlockCount(glm::gtc::ceilMultiple(Extent, gli::block_extent(Format)) / gli::block_extent(Format))
 		, BlockExtent(gli::block_extent(Format))
 		, Extent(Extent)
 	{
@@ -152,7 +152,7 @@ namespace gli
 	{
 		GLI_ASSERT(Level >= 0 && Level < this->levels());
 
-		return this->BlockSize * glm::compMul(this->block_count(Level));
+		return this->BlockSize * glm::gtx::compMul(this->block_count(Level));
 	}
 
 	inline storage_linear::size_type storage_linear::face_size(size_type BaseLevel, size_type MaxLevel) const

@@ -1,5 +1,4 @@
-#include <glm/ext/vector_packing.hpp>
-#include <glm/gtc/packing.hpp>
+import glm;
 
 namespace gli
 {
@@ -9,7 +8,7 @@ namespace gli
 		{
 			glm::vec4 Color[4];
 
-			Color[0] = glm::vec4(unpackUnorm1x5_1x6_1x5(Block.Color0), 1.0f);
+			Color[0] = glm::vec4(gtc::unpackUnorm1x5_1x6_1x5(Block.Color0), 1.0f);
 			std::swap(Color[0].r, Color[0].b);
 			Color[1] = glm::vec4(unpackUnorm1x5_1x6_1x5(Block.Color1), 1.0f);
 			std::swap(Color[1].r, Color[1].b);
