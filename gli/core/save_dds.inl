@@ -30,9 +30,9 @@ namespace detail
 		{
 			detail::formatInfo const & FormatInfo = detail::get_format_info(Format);
 			
-			if(FormatInfo.Flags & detail::CAP_DDS_GLI_EXT_BIT)
-				return dx::D3DFMT_GLI1;
-			else
+			//if(FormatInfo.Flags & detail::CAP_DDS_GLI_EXT_BIT)
+			//	return dx::D3DFMT_GLI1;
+			//else
 				return dx::D3DFMT_DX10;
 		}
 		else
