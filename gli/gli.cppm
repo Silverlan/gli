@@ -54,6 +54,7 @@ export import :duplicate;
 export import :convert;
 export import :view;
 export import :comparison;
+export import :generate_mipmaps;
 
 export import :reduce;
 export import :transform;
