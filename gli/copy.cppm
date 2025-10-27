@@ -3,6 +3,8 @@
 
 module;
 
+#include <cstddef>
+
 export module gli:copy;
 
 export namespace gli

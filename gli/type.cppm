@@ -60,5 +60,8 @@ export namespace gli
 	}
 
 	using std::size_t;
+	using glm::defaultp;
+	typedef int length_t;
+
 	typedef glm::uint8 byte;
 }//namespace gli

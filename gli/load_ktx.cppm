@@ -5,6 +5,9 @@ module;
 
 #include "definitions.hpp"
 #include <string>
+#include <cinttypes>
+#include <cstring>
+#include <vector>
 
 export module gli:load_ktx;
 

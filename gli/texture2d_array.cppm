@@ -9,7 +9,7 @@ export module gli:texture2d_array;
 
 export import :texture2d;
 
-namespace gli
+export namespace gli
 {
 	/// 2d array texture
 	class texture2d_array : public texture

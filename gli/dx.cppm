@@ -5,6 +5,7 @@ module;
 
 #include "definitions.hpp"
 #include <array>
+#include <cinttypes>
 
 export module gli:dx;
 

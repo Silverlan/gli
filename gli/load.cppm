@@ -4,6 +4,7 @@
 module;
 
 #include <string>
+#include <vector>
 
 export module gli:load;
 

@@ -3,6 +3,7 @@ module;
 #include "definitions.hpp"
 #include <array>
 #include <cassert>
+#include <cstring>
 
 export module gli:core.flip;
 

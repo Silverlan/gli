@@ -13,7 +13,7 @@ export import :texture2d_array;
 export import :texture_cube_array;
 export import :texture3d;
 
-namespace gli
+export namespace gli
 {
 	/// Create an image view of an existing image, sharing the same memory storage_linear.
 	image view(image const & Image);

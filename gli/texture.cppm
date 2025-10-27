@@ -7,6 +7,7 @@ module;
 #include <array>
 #include <memory>
 #include <vector>
+#include <cstring>
 
 export module gli:texture;
 

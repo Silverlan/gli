@@ -5,6 +5,7 @@ module;
 
 #include "definitions.hpp"
 #include <memory>
+#include <cstring>
 
 export module gli:image;
 

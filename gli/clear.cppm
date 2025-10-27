@@ -3,6 +3,8 @@
 
 module;
 
+#include <cstddef>
+
 export module gli:clear;
 
 export namespace gli
