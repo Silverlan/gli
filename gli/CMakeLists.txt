@@ -20,18 +20,18 @@ target_include_directories(${NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
 target_link_libraries(${NAME} PRIVATE "glm_module")
 
 set_target_properties(${NAME} PROPERTIES
-  CXX_STANDARD 20
+  CXX_STANDARD 23
   POSITION_INDEPENDENT_CODE ON
 )
 
 target_sources(${NAME}
   PUBLIC
     FILE_SET cxx_modules TYPE CXX_MODULES FILES
-    ${ROOT_SOURCE}
+      ${ROOT_SOURCE}
+      ${CORE_SOURCE}
 )
 
 target_sources(${NAME}
   PRIVATE
-    ${CORE_SOURCE}
     ${ROOT_SOURCE_IMPL}
 )

@@ -5,6 +5,7 @@ module;
 
 #include "definitions.hpp"
 #include <array>
+#include <algorithm>
 
 export module gli:gl;
 
