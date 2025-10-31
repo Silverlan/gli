@@ -3,8 +3,7 @@
 
 module;
 
-#include <string>
-#include <vector>
+#include <cstdio>
 
 export module gli:load;
 

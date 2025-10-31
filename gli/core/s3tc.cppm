@@ -3,7 +3,6 @@
 
 module;
 
-#include <utility>
 
 export module gli:core.s3tc;
 

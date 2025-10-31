@@ -4,7 +4,6 @@
 module;
 
 #include "definitions.hpp"
-#include <cstdint>
 #include <cassert>
 
 export module gli:format;

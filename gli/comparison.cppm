@@ -4,7 +4,6 @@
 module;
 
 #include "definitions.hpp"
-#include <cstring>
 
 export module gli:comparison;
 

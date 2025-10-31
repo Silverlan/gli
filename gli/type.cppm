@@ -4,11 +4,11 @@
 module;
 
 // STD
-#include <cstddef>
 
 export module gli:type;
 
 export import glm;
+export import std.compat;
 
 #if GLM_COMPILER & GLM_COMPILER_VC
 #	define GLI_FORCE_INLINE __forceinline

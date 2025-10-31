@@ -4,10 +4,6 @@
 module;
 
 #include "definitions.hpp"
-#include <string>
-#include <cstring>
-#include <cinttypes>
-#include <vector>
 
 export module gli:save_dds;
 

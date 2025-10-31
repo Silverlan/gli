@@ -4,10 +4,7 @@
 module;
 
 #include "definitions.hpp"
-#include <string>
-#include <cinttypes>
-#include <cstring>
-#include <vector>
+#include <cstdio>
 
 export module gli:load_kmg;
 

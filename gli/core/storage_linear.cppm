@@ -2,13 +2,7 @@ module;
 
 #include "definitions.hpp"
 // STD
-#include <vector>
-#include <queue>
-#include <string>
 #include <cassert>
-#include <cmath>
-#include <cstring>
-#include <memory>
 
 export module gli:core.storage_linear;
 

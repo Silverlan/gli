@@ -24,7 +24,6 @@
 
 module;
 
-#include <cinttypes>
 
 export module gli;
 

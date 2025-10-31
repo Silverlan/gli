@@ -1,7 +1,6 @@
 module;
 
 #include "definitions.hpp"
-#include <limits>
 
 export module gli:core.convert_func;
 

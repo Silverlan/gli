@@ -3,9 +3,10 @@
 
 module;
 
-#include <cstddef>
 
 export module gli:copy;
+
+export import std.compat;
 
 export namespace gli
 {

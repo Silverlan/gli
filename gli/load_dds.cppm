@@ -4,10 +4,7 @@
 module;
 
 #include "definitions.hpp"
-#include <string>
-#include <cstring>
-#include <cinttypes>
-#include <vector>
+#include <cstdio>
 
 export module gli:load_dds;
 
