@@ -27,11 +27,11 @@ set_target_properties(${NAME} PROPERTIES
 target_sources(${NAME}
   PUBLIC
     FILE_SET cxx_modules TYPE CXX_MODULES FILES
-      ${ROOT_SOURCE}
-      ${CORE_SOURCE}
+    ${ROOT_SOURCE}
 )
 
 target_sources(${NAME}
   PRIVATE
+    ${CORE_SOURCE}
     ${ROOT_SOURCE_IMPL}
 )
